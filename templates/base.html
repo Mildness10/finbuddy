@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FinBuddy</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    {% block extra_css %}{% endblock extra_css %}
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -63,7 +64,29 @@
     <!-- NAVBAR ENDS -->
 
     {% block content %} {% endblock %}
-
+    <footer class="py-5 bg-dark">
+        <div class="container px-4">
+            <div class="d-flex justify-content-between">
+                <p class="text-start m-0">
+                    <ul class="text-start social-icons">
+                        <li>
+                            <a href="#"><i class="fab fa-facebook text-white"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-instagram text-white"></i></a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fab fa-twitter text-white"></i></a>
+                        </li>
+                    </ul>
+                </p>
+                <p class="m-0 text-end text-white text-end">
+                    Copyright &copy; FinBuddy 2024
+                </p>
+            </div>
+        </div>
+    </footer>
+    {% comment %}
     <footer>
       <p class="fin-footer">© 2021 FinBuddy</p>
       <ul class="social-icons">
@@ -78,12 +101,21 @@
         </li>
       </ul>
     </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-L8U+HzOJh0Ae6hEnUVI72ud1jIvQGGSPDTPmhO9EJsM=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+    {% endcomment %}
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-L8U+HzOJh0Ae6hEnUVI72ud1jIvQGGSPDTPmhO9EJsM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

@@ -1,5 +1,54 @@
-{% extends "base.html" %} {% load static %} {% block content %}
-<section class="welcome-section">
+{% extends "base.html" %} 
+{% load static %} 
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+{% endblock extra_css %}
+
+
+{% block content %}
+        <!-- Header-->
+        <header class="bg-primary bg-gradient text-white">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to FinBuddy</h1>
+                <p class="lead">We believe that financial literacy is the cornerstone of security, growth, and personal empowerment! Our AI-powered library, built with heart and expertise, offers lessons from Budgeting and Credit, to Savings and Taxes, as well as your very own AI Financial Advisor!</p>
+                <a class="btn btn-lg btn-light" href="#about">Start scrolling!</a>
+            </div>
+        </header>
+        <!-- About section-->
+        <section id="about">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>About Us</h2>
+                        <p class="lead">
+                            At FinBuddy, we're passionate about empowering individuals through financial literacy. We firmly believe that understanding how money works is essential for achieving security, fostering growth, and ultimately realizing personal empowerment.
+                        <p class="lead">
+                            Our platform is designed with care and expertise, leveraging cutting-edge AI technology to provide you with a comprehensive library of resources. Whether you're just starting your journey towards financial independence or looking to deepen your understanding of complex financial concepts, we've got you covered.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="bg-light" id="services">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Services we offer</h2>
+                        <p class="lead">
+                            From mastering the art of budgeting and navigating the intricacies of credit to maximizing your savings potential and tackling taxes with confidence, our curated lessons offer practical insights and actionable advice to help you take control of your financial future.
+                        </p>
+                        <p class="lead">
+                            But that's not all - with our AI Financial Advisor, you'll have personalized guidance tailored to your unique financial goals and circumstances. Think of it as your virtual financial mentor, available whenever you need it, to offer expert recommendations and support every step of the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+{% comment %} <section class="welcome-section">
   <div class="welcome">
     <h1>Welcome!</h1>
     <br />
@@ -36,5 +85,5 @@
       </p>
     </div>
   </div>
-</section>
+</section> {% endcomment %}
 {% endblock %}
