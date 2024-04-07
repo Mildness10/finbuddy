@@ -1,0 +1,114 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<style>
+  .button-style {
+    border: none;
+    border-radius: 20px;
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    margin: 1px 2px;
+    cursor: pointer;
+  }
+
+  .list-group-item:hover {
+    background-color: #0d6efd;
+    color: white;
+  }
+</style>
+<div class="list-group">
+  <!-- Budgeting -->
+  <a
+    href="#"
+    class="list-group-item list-group-item-action"
+    aria-current="true"
+  >
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Budgeting</h5>
+    </div>
+    <p class="mb-1">
+      Learn the fundamental principles of budgeting and how to effectively
+      manage your finances. Discover strategies for creating a budget, tracking
+      expenses, and prioritizing spending to achieve your financial goals.
+    </p>
+    <br />
+    <small><button class="button-style">Click to get started.</button></small>
+  </a>
+
+  <!-- Credit -->
+  <a class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Credit</h5>
+    </div>
+    <p class="mb-1">
+      Understand the importance of credit and how it impacts your financial
+      well-being. Explore topics such as credit scores, credit reports, and the
+      factors that influence them. Learn how to establish, build, and maintain
+      good credit habits for a healthier financial future.
+    </p>
+    <br />
+    <small class="text-body-secondary"
+      ><button class="button-style">Click to get started.</button></small
+    >
+  </a>
+
+  <!-- Savings -->
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Savings</h5>
+    </div>
+    <p class="mb-1">
+      Dive into the world of savings and discover strategies for building a
+      strong financial foundation. Explore different savings goals, from
+      emergency funds to long-term investments, and learn how to set achievable
+      targets. Explore various savings vehicles and investment options to make
+      your money work harder for you.
+    </p>
+    <br />
+    <small class="text-body-secondary"
+      ><button class="button-style">Click to get started.</button></small
+    >
+  </a>
+
+  <!-- Investing -->
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Investing</h5>
+    </div>
+    <p class="mb-1">
+      Gain insights into the basics of investing and explore opportunities to
+      grow your wealth. Learn about different investment vehicles, such as
+      stocks, bonds, mutual funds, and real estate, and understand the risks and
+      rewards associated with each. Discover investment strategies and
+      principles to help you build a diversified portfolio tailored to your
+      financial goals and risk tolerance.
+    </p>
+    <br />
+    <small class="text-body-secondary"
+      ><button class="button-style">Click to get started.</button></small
+    >
+  </a>
+
+  <!-- Taxes -->
+  <a href="#" class="list-group-item list-group-item-action">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1">Taxes</h5>
+    </div>
+    <p class="mb-1">
+      Navigate the complex world of taxes with confidence and clarity. Learn
+      about different types of taxes, tax deductions, credits, and filing
+      requirements. Understand how life events and financial decisions impact
+      your tax liability and discover strategies for minimizing taxes legally
+      and ethically.
+    </p>
+    <br />
+    <small class="text-body-secondary"
+      ><button class="button-style">Click to get started.</button></small
+    >
+  </a>
+</div>
+
+{% endblock %}

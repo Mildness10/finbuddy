@@ -19,6 +19,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   </head>
   <body>
     <!-- NAVBAR BEGINS -->
@@ -43,13 +44,15 @@
         >
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Home</a>
+              <a class="nav-link" aria-current="page" href="{% url 'home' %}"
+                >Home</a
+              >
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Financial Health</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Learn</a>
+              <a class="nav-link" href="{% url 'learn' %}">Learn</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Financial Advisor</a>
@@ -64,44 +67,39 @@
     <!-- NAVBAR ENDS -->
 
     {% block content %} {% endblock %}
-    <footer class="py-5 bg-dark">
-        <div class="container px-4">
-            <div class="d-flex justify-content-between">
-                <p class="text-start m-0">
-                    <ul class="text-start social-icons">
-                        <li>
-                            <a href="#"><i class="fab fa-facebook text-white"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-instagram text-white"></i></a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fab fa-twitter text-white"></i></a>
-                        </li>
-                    </ul>
-                </p>
-                <p class="m-0 text-end text-white text-end">
-                    Copyright &copy; FinBuddy 2024
-                </p>
-            </div>
+    <footer class="py-3 bg-dark">
+      <div class="container px-4">
+        <div class="d-flex justify-content-between align-items-center">
+          <ul class="text-start m-0 d-flex gap-4">
+            <li>
+              <a href="#"
+                ><i
+                  class="fab fa-facebook text-white"
+                  style="font-size: 25px"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fab fa-instagram text-white"
+                  style="font-size: 25px"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i
+                  class="fab fa-twitter text-white"
+                  style="font-size: 25px"
+                ></i
+              ></a>
+            </li>
+          </ul>
+          <p class="m-0 text-end text-white">Copyright &copy; FinBuddy 2024</p>
         </div>
+      </div>
     </footer>
-    {% comment %}
-    <footer>
-      <p class="fin-footer">© 2021 FinBuddy</p>
-      <ul class="social-icons">
-        <li>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </li>
-        <li>
-          <a href="#"><i class="fab fa-twitter"></i></a>
-        </li>
-      </ul>
-    </footer>
-    {% endcomment %}
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-L8U+HzOJh0Ae6hEnUVI72ud1jIvQGGSPDTPmhO9EJsM="
