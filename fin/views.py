@@ -7,4 +7,9 @@ class HomePageView(TemplateView):
 
 class LearnPageView(TemplateView):
     template_name = 'learn.html'
-    
+
+class FeedbackPageView(TemplateView):
+    template_name = 'feedback.html'
+
+class FinHealthPageView(TemplateView):
+    template_name = 'finhealth.html'
