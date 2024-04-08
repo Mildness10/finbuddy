@@ -1,13 +1,26 @@
 {
-    "builds": [{
-        "src": "finbuddy.wsgi.application",
-        "use": "@ardnt/vercel-python-wsgi",
-        "config": { "maxLambdaSize": "15mb" }
-    }],
-    "routes": [
-        {
-            "src": "/(.*)",
-            "dest": "finbuddy.wsgi.application"
+    "builds": [
+      {
+        "src": "build_files.sh",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "staticfiles_build"
         }
+      },
+      {
+        "src": "/finbuddy/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxLambdaSize": "15mb" }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "finbuddy/wsgi.py"
+      },
+      {
+        "src": "/static/(.*)",
+        "dest": "/static/$1"
+      }
     ]
-}
+  }
