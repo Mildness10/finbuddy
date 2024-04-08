@@ -1,81 +1,121 @@
-{% extends "base.html" %}
-{% load static %}
-
-
-{% block content %}
+{% extends "base.html" %} {% load static %} {% block content %}
 <main>
-    <section class="welcome-message">
-        <h2>Welcome to Your Financial Health Assessment!</h2>
-    </section>
+  <section
+    class="welcome-message"
+    style="background-color: #f8f9fa; padding: 20px"
+  >
+    <h2>Welcome to Your Financial Health Assessment!</h2>
+  </section>
 
-    <section class="quiz-prompt">
-        <p>Congratulations! You have taken the first step towards your financial success! Take the quiz below to assess your current financial knowledge and receive insights into areas where you can improve. This information will not be saved and would only be used to generate resources to aid in boosting your Financial Literacy!</p>
-        <button class="btn btn-primary" style="background: #0d6efd"><a href="https://take.quiz-maker.com/Q1XRLXMBO" target="_blank" class="quiz-link" style="text-decoration: none; color: #fff;">Start Quiz</a></button>
-    </section>
+  <section class="quiz-prompt" style="background-color: #f8f9fa; padding: 50px">
+    <p>
+      Congratulations! You have taken the first step towards your financial
+      success! Take the quiz below to assess your current financial knowledge
+      and receive insights into areas where you can improve. This information
+      will not be saved and would only be used to generate resources to aid in
+      boosting your Financial Literacy!
+    </p>
+    <button class="btn btn-primary" style="background: #0d6efd">
+      <a
+        href="https://take.quiz-maker.com/Q1XRLXMBO"
+        target="_blank"
+        class="quiz-link"
+        style="text-decoration: none; color: #fff"
+        >Start Quiz</a
+      >
+    </button>
+  </section>
+  <br />
+  <br />
+  <section class="benefits" style="background-color: #ffffff; margin: 20px">
+    <h2>Benefits of Financial Literacy</h2>
+    <p>
+      Financial literacy empowers individuals to make informed decisions about
+      their money, leading to:
+    </p>
+    <ul>
+      <li>Greater financial stability and security</li>
+      <li>Reduced stress and anxiety about money matters</li>
+      <li>Improved ability to achieve financial goals</li>
+      <li>Better financial decision-making skills</li>
+    </ul>
+  </section>
+  <br />
+  <br />
+  <section class="tips" style="background-color: #ffffff; padding: 20px">
+    <h2>Financial Health Tips</h2>
+    <p>Here are some tips to improve your financial health:</p>
+    <ul>
+      <li>Create a monthly budget and track your expenses</li>
+      <li>Save regularly, even if it's a small amount</li>
+      <li>Avoid high-interest debt and pay off existing debt</li>
+      <li>Invest in your future by starting a retirement account</li>
+      <li>Stay informed about financial news and trends</li>
+    </ul>
+  </section>
+  <br />
+  <br />
+  <section
+    class="testimonials"
+    style="background-color: #f8f9fa; padding: 50px"
+  >
+    <h2>Success Stories</h2>
+    <p>Read how others have improved their financial health:</p>
+    <div class="testimonial">
+      <blockquote>
+        <p style="font-weight: bold; font-size: larger">
+          <em
+            >"Thanks to the financial education I received, I was able to pay
+            off my debt and start saving for my dream vacation!"</em
+          >
+        </p>
+        <cite>- Amanda Terry</cite>
+      </blockquote>
+    </div>
+    <div class="testimonial">
+      <blockquote>
+        <p style="font-weight: bold; font-size: larger">
+          <em
+            >"Learning about investing helped me grow my wealth and achieve
+            financial independence sooner than I ever thought possible."</em
+          >
+        </p>
+        <cite>- Chen Huang</cite>
+      </blockquote>
+    </div>
+    <div class="testimonial">
+      <blockquote>
+        <p style="font-weight: bold; font-size: larger">
+          <em
+            >"The financial literacy resources provided me with the knowledge to
+            make informed decisions and secure a better future for myself and my
+            family."</em
+          >
+        </p>
+        <cite>- Tyrone Jackson</cite>
+      </blockquote>
+    </div>
+  </section>
+  <br />
+  <br />
+  <section
+    class="additional-resources"
+    style="background-color: #ffffff; padding: 20px"
+  >
+    <h2>Additional Resources</h2>
+    <p>
+      Explore more financial education resources from out website
+      <a href="{% url 'learn' %}">HERE</a>
+    </p>
+  </section>
 
-    <section class="learn-further">
-        <h2>Learn More</h2>
-        <p>After completing the quiz, explore our educational resources to enhance your financial literacy:</p>
-        <ul>
-            <li><a href="learn.html#budgeting">Budgeting</a></li>
-            <li><a href="learn.html#credit">Credit</a></li>
-            <li><a href="learn.html#savings">Savings</a></li>
-            <li><a href="learn.html#investing">Investing</a></li>
-            <li><a href="learn.html#taxes">Taxes</a></li>
-        </ul>
-    </section>
-
-    <section class="benefits">
-        <h2>Benefits of Financial Literacy</h2>
-        <p>Financial literacy empowers individuals to make informed decisions about their money, leading to:</p>
-        <ul>
-            <li>Greater financial stability and security</li>
-            <li>Reduced stress and anxiety about money matters</li>
-            <li>Improved ability to achieve financial goals</li>
-            <li>Better financial decision-making skills</li>
-        </ul>
-    </section>
-
-    <section class="tips">
-        <h2>Financial Health Tips</h2>
-        <p>Here are some tips to improve your financial health:</p>
-        <ul>
-            <li>Create a monthly budget and track your expenses</li>
-            <li>Save regularly, even if it's a small amount</li>
-            <li>Avoid high-interest debt and pay off existing debt</li>
-            <li>Invest in your future by starting a retirement account</li>
-            <li>Stay informed about financial news and trends</li>
-        </ul>
-    </section>
-
-    <section class="testimonials">
-        <h2>Success Stories</h2>
-        <p>Read how others have improved their financial health:</p>
-        <blockquote>
-            <p>"Thanks to the financial education I received, I was able to pay off my debt and start saving for my dream vacation!"</p>
-            <cite>- John Doe</cite>
-        </blockquote>
-        <blockquote>
-            <p>"Learning about investing helped me grow my wealth and achieve financial independence sooner than I ever thought possible."</p>
-            <cite>- Jane Smith</cite>
-        </blockquote>
-    </section>
-
-    <section class="additional-resources">
-        <h2>Additional Resources</h2>
-        <p>Explore more financial education resources:</p>
-        <ul>
-            <li><a href="#">Financial Literacy Websites</a></li>
-            <li><a href="#">Recommended Books and Podcasts</a></li>
-            <li><a href="#">Online Courses and Workshops</a></li>
-        </ul>
-    </section>
-
-    <section class="feedback">
-        <h2>Share Your Feedback</h2>
-        <p>We value your input! If you have any feedback or suggestions regarding the quiz or our Financial Health page, please let us know:</p>
-        <a href="feedback.html" class="feedback-link">Provide Feedback</a>
-    </section>
+  <section class="feedback" style="background-color: #ffffff; margin: 20px">
+    <h2>Share Your Feedback</h2>
+    <p>
+      We value your input! If you have any feedback or suggestions regarding the
+      quiz or our Financial Health page, please let us know:
+    </p>
+    <a href="{% url 'feedback' %}" class="feedback-link">Provide Feedback</a>
+  </section>
 </main>
 {% endblock content %}
-
