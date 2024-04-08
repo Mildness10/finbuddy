@@ -1,0 +1,85 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<style>
+  .chat-interface {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+
+  #chat-container {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-y: auto;
+    max-height: 400px; /* Adjust the maximum height as needed */
+    padding: 50px;
+    margin-bottom: 20px;
+  }
+
+  #messages {
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: calc(100% - 70px);
+    height: 50px;
+    resize: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    {% comment %} margin-bottom: 10px; {% endcomment %}
+  }
+
+  button {
+    width: 60px;
+    height: 50px;
+    padding: 0px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transform: translateY(-20px)
+  }
+
+  button:hover {
+    background-color: #555;
+  }
+  .space{
+    height: 30vh;
+
+  }
+</style>
+
+<header style="margin: 20px">
+  <h1 style="margin-bottom: 10px">Financial Advisor</h1>
+  <p style="margin-bottom: 10px; font-size: 25px">
+    My name is Thera and I will be your personal Financial Advisor! You can ask
+    me anything finance-related from “Tips on how to increase your credit
+    score”, to “How to file taxes”. I'm here for you!
+  </p>
+  <br />
+</header>
+
+<main>
+  <section class="chat-interface" style="background-color: #f8f9fa">
+    <div id="chat-container">
+      <div id="messages">
+        <p>
+          Welcome to Thera Financial Advisor Bot! How can I assist you today?
+        </p>
+      </div>
+      <form id="message-form">
+        <textarea
+          id="user-message"
+          name="user-message"
+          placeholder="Chat with Thera..."
+        ></textarea>
+        <button type="submit" id="send-button">Send</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div class="space"></div>
+
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock content %}
