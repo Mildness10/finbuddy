@@ -16,6 +16,11 @@ USER myuser
 # Copy the application files into the working directory
 COPY . /app
 
+# Change the ownership of the /app directory again
+USER root
+RUN chown -R myuser:myuser /app
+USER myuser
+
 # Set the PATH for the myuser user
 ENV PATH="/home/myuser/.local/bin:${PATH}"
 
