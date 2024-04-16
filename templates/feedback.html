@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<form style="margin: 20px;">
+<form style="margin: 20px;" id="feedbackForm">
     {% csrf_token %}
     <div class="mb-3">
         <label for="InputName" class="form-label">Name</label>
@@ -33,5 +33,51 @@
         <p>If you prefer to contact us directly, you can reach us at <a href="mailto:valentine.ezikeoha@bison.howard.edu">contact@finbuddy.com</a>. We're also available on social media platforms such as Twitter, Facebook and Instagram.</p>
     </section>
 </main>
+
+<script>
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Clear form inputs
+        document.getElementById("InputName").value = "";
+        document.getElementById("InputEmail").value = "";
+        document.getElementById("InputFeedback").value = "";
+
+        // Display popup message
+        var popup = document.createElement("div");
+        popup.classList.add("popup");
+        popup.innerText = "Thank you for your feedback! Your input is valuable to us.";
+        document.body.appendChild(popup);
+
+        setTimeout(function() {
+            popup.remove();
+        }, 5000);
+    });
+</script>
+
+<style>
+    .popup {
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #0d6efd;
+        color: white;
+        padding: 50px;
+        border-radius: 10px;
+        animation: popupAnimation 1s ease-in-out;
+    }
+
+    @keyframes popupAnimation {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+        100% {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+</style>
 
 {% endblock content %}

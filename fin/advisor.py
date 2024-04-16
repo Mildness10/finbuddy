@@ -22,7 +22,7 @@ pdf_file_names = [os.path.basename(pdf_file) for pdf_file in pdf_files]
 
 pdf_texts = [extract_text_from_pdf(pdf_path) for pdf_path in pdf_file_names]
 
-llm = ChatOpenAI(api_key="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")
+llm = ChatOpenAI(api_key="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")
 
 
 def get_advisor_response(user_input):
