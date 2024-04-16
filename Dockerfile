@@ -11,6 +11,9 @@ WORKDIR /app
 # Copy the application files into the working directory
 COPY . /app
 
+# Set the PATH for the myuser user
+ENV PATH="/home/myuser/.local/bin:${PATH}"
+
 # Install the application dependencies
 RUN pip install --user -r requirements.txt
 
@@ -18,4 +21,4 @@ RUN pip install --user -r requirements.txt
 EXPOSE 8000
 
 # Define the entry point for the container
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.1.0:8000"]
