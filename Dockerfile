@@ -21,4 +21,4 @@ RUN pip install --user -r requirements.txt
 EXPOSE 8000
 
 # Define the entry point for the container
-CMD ["python", "manage.py", "runserver", "0.0.1.0:8000"]
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
