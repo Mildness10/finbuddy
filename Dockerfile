@@ -27,6 +27,9 @@ ENV PATH="/home/myuser/.local/bin:${PATH}"
 # Install the application dependencies
 RUN pip install --user -r requirements.txt
 
+# Install whitenoise
+RUN pip install --user whitenoise
+
 # Collect static files
 RUN python manage.py collectstatic --noinput
 
