@@ -17,6 +17,9 @@ ENV PATH="/home/myuser/.local/bin:${PATH}"
 # Install the application dependencies
 RUN pip install --user -r requirements.txt
 
+# Collect static files
+RUN python manage.py collectstatic --noinput
+
 # Expose the application port
 EXPOSE 8000
 
