@@ -8,6 +8,11 @@ USER myuser
 # Set the working directory in the container
 WORKDIR /app
 
+# Change the ownership of the /app directory
+USER root
+RUN chown -R myuser:myuser /app
+USER myuser
+
 # Copy the application files into the working directory
 COPY . /app
 
