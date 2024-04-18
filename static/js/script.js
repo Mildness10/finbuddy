@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return cookieValue;
         }
         
-        const csrftoken = getCookie('csrftoken');
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
         // Send user message to backend for processing
         fetch('/finadvisor/', {
             method: 'POST',

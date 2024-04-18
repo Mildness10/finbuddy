@@ -67,6 +67,7 @@
         </p>
       </div>
       <form id="message-form">
+        {% csrf_token %}
         <textarea
           id="user-message"
           name="user-message"
